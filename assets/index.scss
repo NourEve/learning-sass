@@ -1,0 +1,65 @@
+@mixin margin {
+    margin-left: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tout{
+    width: 427px;
+    height: 650px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 20px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    .d_g{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .date{
+        position: absolute;
+        margin: 10px;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 40%;
+        background-color: antiquewhite;
+    }
+    .gandalf{
+        margin-bottom: -25px;
+    }
+}
+
+main{
+    .txt_photo{
+        border: 2px solid black;
+        padding: 10px 10px 10px 20px;
+        background-color: antiquewhite;
+        position: relative;
+    }
+    h1{
+       @include margin;
+        margin-top: 30px;
+    }
+    h2{
+        @include margin;
+    }
+    p{
+        @include margin;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+

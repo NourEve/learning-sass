@@ -1,0 +1,58 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tout {
+  width: 427px;
+  height: 650px;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  margin: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .d_g {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+header .date {
+  position: absolute;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 40%;
+  background-color: antiquewhite;
+}
+header .gandalf {
+  margin-bottom: -25px;
+}
+
+main .txt_photo {
+  border: 2px solid black;
+  padding: 10px 10px 10px 20px;
+  background-color: antiquewhite;
+  position: relative;
+}
+main h1 {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+main h2 {
+  margin-left: 20px;
+}
+main p {
+  margin-left: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}/*# sourceMappingURL=index.css.map */
