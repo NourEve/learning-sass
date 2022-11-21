@@ -28,11 +28,14 @@ body {
   color: black;
   width: 427px;
   height: 600px;
-  border: 5px solid black;
+  border: 1px solid #666666;
   display: flex;
   flex-direction: column;
   align-content: space-around;
   margin-top: 30px;
+}
+body:hover {
+  box-shadow: 5px 5px 5px #666666;
 }
 
 header {
