@@ -1,90 +1,95 @@
+@-webkit-keyframes appearanceofthetext {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 60px;
+  }
+}
+@keyframes appearanceofthetext {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 60px;
+  }
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
 
-.tout {
+.all {
   width: 427px;
   height: 650px;
   border: 5px solid black;
   display: flex;
   flex-direction: column;
   align-content: space-around;
-  margin: 20px;
-  position: relative;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 header {
   display: flex;
   flex-direction: column;
 }
-header .d_g {
-  position: relative;
+header .header__all {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: end;
 }
-header .date {
-  position: absolute;
-  margin: 10px;
-  border: 2px solid black;
+header .header__date {
+  color: #FCF8E8;
+  background-color: #DF7861;
   padding: 10px;
   border-radius: 40%;
-  background-color: antiquewhite;
+  position: absolute;
+  margin: 10px;
 }
-header .gandalf {
+header .header__img {
   margin-bottom: -25px;
 }
 
-main .txt_photo {
-  border: 2px solid black;
-  padding: 10px 10px 10px 20px;
-  background-color: antiquewhite;
+.proj-main__photos {
+  color: #FCF8E8;
+  background-color: #DF7861;
+  padding: 10px;
   position: relative;
+  padding-left: 20px;
 }
-main h1 {
+.proj-main__titles {
   margin-left: 20px;
+  margin-right: 20px;
   margin-top: 30px;
+  cursor: pointer;
 }
-main h2 {
-  margin-left: 20px;
+.proj-main__titles h2 {
+  color: #DF7861;
 }
-main p {
+.proj-main__titles:hover + .proj-main__txt {
+  -webkit-animation: appearanceofthetext 1s forwards;
+          animation: appearanceofthetext 1s forwards;
+}
+.proj-main__txt {
   margin-left: 20px;
+  margin-right: 20px;
+  color: #666666;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0;
 }
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 45px;
 }
-
-.monter {
-  opacity: 1;
-  font-size: 1em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 250px;
-  transition: all 400ms ease-out;
-}
-
-.tout .monter:hover {
-  opacity: 1;
-}
-
-.tout .monter .parole {
-  height: 0;
-  opacity: 1;
-  transition-delay: 0s;
-  transition-duration: 0.4s;
-}
-
-.tout .monter:hover .parole {
-  opacity: 1;
-  transform: translateY(250px);
-  -webkit-transform: translateY(250px);
+footer .comments {
+  margin-left: -70px;
+  color: #94B49F;
 }/*# sourceMappingURL=index.css.map */

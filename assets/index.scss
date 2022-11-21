@@ -1,97 +1,96 @@
 @mixin margin {
     margin-left: 20px;
+    margin-right: 20px;
 }
+@mixin info {
+    color: $secondary-color;
+    background-color: $back-color;
+    padding: 10px;
+}
+@keyframes appearanceofthetext {
+From {
+    opacity: 0;
+}
+To {
+    opacity: 1;
+    max-height: 60px;
+}
+}
+
+$back-color: #DF7861;
+$primary-color: black;
+$secondary-color: #FCF8E8;
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $primary-color;
 }
 
-.tout{
+.all {
     width: 427px;
     height: 650px;
     border: 5px solid black;
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    margin: 20px;
-    position: relative;
-    padding: 0;
-    display: block;
-    cursor: pointer;
-    overflow: hidden;
+    @include margin;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
-    .d_g{
-        position: relative;
+    .header__all {
         display: flex;
         flex-direction: column;
+        position: relative;
         align-items: end;
     }
-    .date{
+    .header__date {
+        @include info;
+        border-radius: 40%;
         position: absolute;
         margin: 10px;
-        border: 2px solid black;
-        padding: 10px;
-        border-radius: 40%;
-        background-color: antiquewhite;
     }
-    .gandalf{
+    .header__img {
         margin-bottom: -25px;
     }
+    
 }
 
-main{
-    .txt_photo{
-        border: 2px solid black;
-        padding: 10px 10px 10px 20px;
-        background-color: antiquewhite;
+.proj-main {
+    &__photos {
+        @include info;
         position: relative;
+        padding-left: 20px;
     }
-    h1{
-       @include margin;
+    &__titles {
+        @include margin;
         margin-top: 30px;
+        cursor: pointer;
+        h2 {
+            color: $back-color;
+        }
+        &:hover + .proj-main__txt {
+            animation: appearanceofthetext 1s forwards;
+        }
     }
-    h2{
+    &__txt {
         @include margin;
-    }
-    p{
-        @include margin;
+        color: lighten($primary-color, 40%);
+        text-align: justify;
+        overflow: hidden;
+        max-height: 0;
     }
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 45px;
+    .comments {
+        margin-left: -70px;
+        color: #94B49F;
+    }
 }
 
-.monter{
-    opacity: 1;
-    font-size: 1em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 250px;
-    -webkit-transition: all 400ms ease-out;
-    -moz-transition: all 400ms ease-out;
-    -o-transition: all 400ms ease-out;
-    -ms-transition: all 400ms ease-out;
-    transition: all 400ms ease-out;
-}
-.tout .monter:hover{
-    opacity: 1;
-}
-.tout .monter .parole{
-    height: 0;
-    opacity: 1;
-    transition-delay: 0s;
-    transition-duration: 0.4s;
-}
-.tout .monter:hover .parole{
-    opacity: 1;
-    transform: translateY(250px);
-    -webkit-transform: translateY(250px);
-}
